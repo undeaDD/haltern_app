@@ -39,7 +39,9 @@ Bun.serve({
     }
 
     const pathname = url.pathname === '/' ? '/index.html' : url.pathname;
-    const file = Bun.file(join('dist', pathname));
+    // Serve index.html from dist/, everything else (assets) from project root
+    const distFile = Bun.file(join('dist', pathname));
+    const file = await distFile.exists() ? distFile : Bun.file(join('.', pathname));
     if (!await file.exists()) return new Response('Not found', { status: 404 });
     return new Response(file);
   },
