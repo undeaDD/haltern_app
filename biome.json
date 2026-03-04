@@ -1,5 +1,5 @@
 {
-  "files": {
-    "ignore": ["dist/", ".claude/", "node_modules/"]
-  }
+	"files": {
+		"includes": ["**", "!dist", "!.claude", "!node_modules"]
+	}
 }

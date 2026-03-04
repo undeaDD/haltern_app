@@ -3,9 +3,6 @@ marp: true
 theme: default
 paginate: true
 style: |
-  :root { --marpit-root-background: #0c1b35; }
-  html, body { margin: 0px !important; padding: 0px !important; background: #0c1b35 !important; }
-
   /* ─── Base ─── */
   section {
     background: #ffffff;

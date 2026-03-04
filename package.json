@@ -1,14 +1,14 @@
 {
-  "name": "haltern-presentation",
-  "version": "1.0.0",
-  "description": "Marp presentation",
-  "scripts": {
-    "build": "bun build.js",
-    "dev": "bun dev.js"
-  },
-  "type": "module",
-  "dependencies": {
-    "@marp-team/marp-core": "^4.3.0",
-    "@marp-team/marpit": "^3.2.1"
-  }
+	"name": "haltern-presentation",
+	"version": "1.0.0",
+	"description": "Marp presentation",
+	"scripts": {
+		"build": "bun build.js",
+		"dev": "bun dev.js"
+	},
+	"type": "module",
+	"dependencies": {
+		"@marp-team/marp-core": "^4.3.0",
+		"@marp-team/marpit": "^3.2.1"
+	}
 }
