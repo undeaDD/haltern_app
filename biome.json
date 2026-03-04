@@ -1,0 +1,5 @@
+{
+  "files": {
+    "ignore": ["dist/", ".claude/", "node_modules/"]
+  }
+}
