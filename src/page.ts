@@ -1,10 +1,15 @@
 import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { Marp } from "@marp-team/marp-core";
 
-const marp = new Marp({ html: true, inlineSVG: true, breaks: true });
+const marp = new Marp({ html: true, inlineSVG: true });
 
-export function buildPage({ liveReload = false } = {}) {
-	const markdown = readFileSync("slides.md", "utf8");
+interface BuildPageOptions {
+	liveReload?: boolean;
+}
+
+export function buildPage({ liveReload = false }: BuildPageOptions = {}): string {
+	const markdown = readFileSync(join(import.meta.dir, "slides.md"), "utf8");
 	const { html, css } = marp.render(markdown);
 
 	return `<!DOCTYPE html>

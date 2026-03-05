@@ -1,20 +1,23 @@
 import { mkdirSync, watch, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { buildPage } from "./page.js";
+import { buildPage } from "./page";
 
 const PORT = 3000;
-const clients = new Set();
+const clients = new Set<ReadableStreamDefaultController>();
 const enc = new TextEncoder();
 
+const distDir = join(import.meta.dir, "../dist");
+const slidesPath = join(import.meta.dir, "slides.md");
+
 function build() {
-	mkdirSync("dist", { recursive: true });
-	writeFileSync("dist/index.html", buildPage({ liveReload: true }));
+	mkdirSync(distDir, { recursive: true });
+	writeFileSync(join(distDir, "index.html"), buildPage({ liveReload: true }));
 	console.log(`[${new Date().toLocaleTimeString()}] Built → dist/index.html`);
 }
 
 build();
 
-watch("slides.md", () => {
+watch(slidesPath, () => {
 	build();
 	const msg = enc.encode("data: reload\n\n");
 	for (const ctrl of clients) {
@@ -32,7 +35,7 @@ Bun.serve({
 		const url = new URL(req.url);
 
 		if (url.pathname === "/__reload") {
-			let controller;
+			let controller: ReadableStreamDefaultController;
 			const stream = new ReadableStream({
 				start(c) {
 					controller = c;
@@ -54,10 +57,11 @@ Bun.serve({
 
 		const pathname = url.pathname === "/" ? "/index.html" : url.pathname;
 		// Serve index.html from dist/, everything else (assets) from project root
-		const distFile = Bun.file(join("dist", pathname));
+		const distFile = Bun.file(join(distDir, pathname));
+		const projectRoot = join(import.meta.dir, "..");
 		const file = (await distFile.exists())
 			? distFile
-			: Bun.file(join(".", pathname));
+			: Bun.file(join(projectRoot, pathname));
 		if (!(await file.exists()))
 			return new Response("Not found", { status: 404 });
 		return new Response(file);

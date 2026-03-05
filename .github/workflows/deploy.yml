@@ -19,7 +19,7 @@ jobs:
         run: bun install
 
       - name: Build
-        run: bun build.js
+        run: bun src/build.ts
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

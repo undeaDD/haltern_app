@@ -3,7 +3,6 @@ marp: true
 theme: default
 paginate: true
 style: |
-  /* ─── Base ─── */
   section {
     background: #ffffff;
     color: #1a1a1a;
@@ -13,6 +12,7 @@ style: |
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    position: relative;
   }
   p, li { line-height: 1.6; margin: 0; }
   ul { padding-left: 1.4em; margin: 0; }
@@ -42,7 +42,6 @@ style: |
     color: rgba(11, 65, 149, 0.3);
   }
 
-  /* ─── TITLE SLIDE ─── */
   section.lead {
     background: #0B4195;
     padding: 0;
@@ -51,7 +50,7 @@ style: |
     text-align: center;
     position: relative;
   }
-  section.lead::before {
+  section::before {
     content: '';
     position: absolute;
     top: -25%; right: -12%;
@@ -59,7 +58,7 @@ style: |
     background: rgba(255,255,255,0.045);
     border-radius: 50%;
   }
-  section.lead::after {
+  section::after {
     content: '';
     position: absolute;
     bottom: -28%; left: -12%;
@@ -77,7 +76,6 @@ style: |
     margin: 0;
   }
 
-  /* ─── TEAM SLIDE ─── */
   .team-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -118,7 +116,6 @@ style: |
     border-top: 1px solid #d0ddf0;
   }
 
-  /* ─── EXPERIENCE SLIDE ─── */
   .stats-row {
     display: flex;
     gap: 0;
@@ -148,12 +145,10 @@ style: |
   .app-more { padding: 0px 2em; }
   .app-label { font-size: 0.42em; color: #888; text-align: center; margin-top: 5px; line-height: 1.2; }
 
-  /* ─── SVG ICON COLORIZATION ─── */
   .card img, .tech-icon, .app-more {
     filter: invert(21%) sepia(100%) saturate(1161%) hue-rotate(204deg) brightness(96%) contrast(101%);
   }
 
-  /* ─── CARDS — shared: Stärken + Funktionen ─── */
   .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .card-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
   .card {
@@ -166,7 +161,6 @@ style: |
   .card h3 { font-size: 0.8em; margin: 0 0 5px; color: #0B4195; }
   .card p { font-size: 0.6em; color: #666; margin: 0; line-height: 1.45; }
 
-  /* ─── TECH STACK SLIDE ─── */
   .tech-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -211,7 +205,6 @@ style: |
     font-weight: 700;
   }
 
-  /* ─── VERGLEICH SLIDE ─── */
   .compare-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -259,7 +252,6 @@ style: |
     box-shadow: 0 2px 8px rgba(11, 65, 149, 0.08);
   }
 
-  /* ─── TIMELINE SLIDE ─── */
   .timeline {
     display: flex;
     align-items: flex-start;
@@ -298,7 +290,18 @@ style: |
   .tl-title { font-size: 0.78em; font-weight: 700; color: #0B4195; text-align: center; margin-bottom: 8px; }
   .tl-desc { font-size: 0.6em; color: #666; text-align: center; line-height: 1.45; }
 
-  /* ─── CLOSING SLIDE ─── */
+  .slide-footnote {
+    position: absolute;
+    bottom: 18px;
+    left: 70px;
+    right: 70px;
+    text-align: center;
+    font-size: 0.5rem;
+    color: #aaa;
+    line-height: 1.4;
+    margin: 0;
+  }
+
   section.closing {
     background: #0B4195;
     padding: 0;
@@ -418,6 +421,7 @@ style: |
   <div class="app-item"><img src="images/app11.png" class="app-icon"><div class="app-label">Borchers Borken</div></div>
   <div class="app-item"><img src="icons/tabler-dots.svg" class="app-icon app-more"><div class="app-label">Und viele mehr</div></div>
 </div>
+<p class="slide-footnote">* White-Label / OEM-App - im Auftrag eines Kunden entwickelt und unter anderen Marken mehrfach veröffentlicht</p>
 </div>
 
 ---
@@ -566,6 +570,7 @@ style: |
 </div>
 
 </div>
+<p class="slide-footnote">* Hosting bei uns ist optional - auf Wunsch auch beim städtischen Rechenzentrum oder einem externen Anbieter möglich</p>
 </div>
 
 ---
@@ -590,9 +595,9 @@ style: |
 <img src="icons/tabler-confetti.svg" class="compare-bg-icon">
 <h3>Unsere Lösung</h3>
 <ul>
-<li>Faire, transparente Entwicklungskosten</li>
-<li>Geringe laufende Kosten nur für Hosting und Hardware</li>
-<li>Alle Features inklusive, keine Modulpreise</li>
+<li>Entwicklung: ca. 10.000-25.000 € je nach Umfang</li>
+<li>Laufend: ca. 200-300 € / Monat (nur Hosting & Wartung)</li>
+<li>Alle Features inklusive - keine Modulpreise</li>
 <li>Vollständig auf Haltern zugeschnitten</li>
 <li>Direkt erreichbar als lokale Partner</li>
 </ul>
@@ -600,7 +605,7 @@ style: |
 
 </div>
 <div class="compare-note">
-<strong>Beispiel Waltrop:</strong></br>Die Stadt stieg von ihrer Standard-App ab, als sie die Website neu startete.</br>Das Produkt ließ sich nicht anpassen. Eine Maßlösung wächst mit der Stadt.
+<strong>Beispiel Waltrop:</strong></br>Die Stadt stieg von ihrer Stempel-App ab, als sie die Website neu startete - das Produkt ließ sich nicht anpassen. Eine Maßlösung wächst mit der Stadt.
 </div>
 </div>
 
@@ -649,11 +654,11 @@ style: |
 <!-- _class: closing -->
 
 <div class="closing-inner">
-  <div class="closing-danke">Vielen Dank.</div>
+  <div class="closing-danke">Vielen Dank</div>
   <div class="closing-sub">Wir freuen uns auf das Gespräch.</div>
   <div class="contact-row">
     <div class="contact-item">
-      <div class="contact-name">Dominic D.</div>
+      <div class="contact-name">Dominic Drees</div>
       <div class="contact-details">dominic.drees@foraum.de<br>+49 151 651 43990</div>
     </div>
   </div>

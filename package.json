@@ -3,12 +3,19 @@
 	"version": "1.0.0",
 	"description": "Marp presentation",
 	"scripts": {
-		"build": "bun build.js",
-		"dev": "bun dev.js"
+		"build": "bun src/build.ts",
+		"dev": "bun src/dev.ts",
+		"lint": "biome check --fix",
+		"typecheck": "tsc --noEmit"
 	},
 	"type": "module",
 	"dependencies": {
 		"@marp-team/marp-core": "^4.3.0",
 		"@marp-team/marpit": "^3.2.1"
+	},
+	"devDependencies": {
+		"@types/node": "^22.0.0",
+		"bun-types": "latest",
+		"typescript": "^5.0.0"
 	}
 }
