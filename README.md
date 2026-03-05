@@ -25,7 +25,3 @@ The slides present a concept for a locally developed mobile app and compare it w
 ## Notes
 
 This repository only contains the **presentation material** and does not represent a finished software project.
-
-## License
-
-See `LICENSE.md`.
