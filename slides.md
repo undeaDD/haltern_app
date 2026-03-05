@@ -364,7 +364,7 @@ style: |
 
 <div class="team-card">
 <img src="images/julius.png" class="team-photo">
-<div class="team-name">Julius Mätzig</div>
+<div class="team-name">Julius Maetzig</div>
 <div class="team-role">Backend Developer</div>
 <div class="team-company">OptiSense GmbH & Co KG</div>
 <div class="team-contact">juliusmaetzig@gmx.de<br>+49 152 573 38483</div>
