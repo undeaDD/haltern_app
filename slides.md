@@ -145,7 +145,6 @@ style: |
     aspect-ratio: 1;
     display: block;
   }
-  .app-more { padding: 0px 2em; }
   .app-label { font-size: 0.42em; color: #888; text-align: center; margin-top: 5px; line-height: 1.2; }
 
   /* ─── SVG ICON COLORIZATION ─── */
@@ -416,7 +415,7 @@ style: |
   <div class="app-item"><img src="images/app09.png" class="app-icon"><div class="app-label">Afk Bank Apps*</div></div>
   <div class="app-item"><img src="images/app10.png" class="app-icon"><div class="app-label">KorekushonX</div></div>
   <div class="app-item"><img src="images/app11.png" class="app-icon"><div class="app-label">Borchers Borken</div></div>
-  <div class="app-item"><img src="icons/tabler-dots.svg" class="app-icon app-more"><div class="app-label">Und viele mehr</div></div>
+  <div class="app-item"><img src="icons/tabler-dots.svg" class="app-icon"><div class="app-label">Und viele mehr</div></div>
 </div>
 </div>
 
