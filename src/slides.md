@@ -142,7 +142,6 @@ style: |
     aspect-ratio: 1;
     display: block;
   }
-  .app-more { padding: 0px 2em; }
   .app-label { font-size: 0.42em; color: #888; text-align: center; margin-top: 5px; line-height: 1.2; }
 
   .card img, .tech-icon, .app-more {
@@ -367,7 +366,7 @@ style: |
 
 <div class="team-card">
 <img src="images/julius.png" class="team-photo">
-<div class="team-name">Julius Mätzig</div>
+<div class="team-name">Julius Maetzig</div>
 <div class="team-role">Backend Developer</div>
 <div class="team-company">OptiSense GmbH & Co KG</div>
 <div class="team-contact">juliusmaetzig@gmx.de<br>+49 152 573 38483</div>
@@ -419,7 +418,7 @@ style: |
   <div class="app-item"><img src="images/app09.png" class="app-icon"><div class="app-label">Afk Bank Apps*</div></div>
   <div class="app-item"><img src="images/app10.png" class="app-icon"><div class="app-label">KorekushonX</div></div>
   <div class="app-item"><img src="images/app11.png" class="app-icon"><div class="app-label">Borchers Borken</div></div>
-  <div class="app-item"><img src="icons/tabler-dots.svg" class="app-icon app-more"><div class="app-label">Und viele mehr</div></div>
+  <div class="app-item"><img src="icons/tabler-dots.svg" class="app-icon"><div class="app-label">Und viele mehr</div></div>
 </div>
 <p class="slide-footnote">* White-Label / OEM-App - im Auftrag eines Kunden entwickelt und unter anderen Marken mehrfach veröffentlicht</p>
 </div>
@@ -659,7 +658,7 @@ style: |
   <div class="contact-row">
     <div class="contact-item">
       <div class="contact-name">Dominic Drees</div>
-      <div class="contact-details">dominic.drees@foraum.de<br>+49 151 651 43990</div>
+      <div class="contact-details">dominic.drees@foraum.de</div>
     </div>
   </div>
 </div>
