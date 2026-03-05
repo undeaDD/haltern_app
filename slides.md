@@ -652,8 +652,8 @@ style: |
   <div class="closing-sub">Wir freuen uns auf das Gespräch.</div>
   <div class="contact-row">
     <div class="contact-item">
-      <div class="contact-name">Dominic D.</div>
-      <div class="contact-details">dominic.drees@foraum.de<br>+49 151 651 43990</div>
+      <div class="contact-name">Dominic Drees</div>
+      <div class="contact-details">dominic.drees@foraum.de</div>
     </div>
   </div>
 </div>
